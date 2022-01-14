@@ -4,6 +4,7 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 html {
   scroll-behavior: smooth;
 }
@@ -19,24 +20,51 @@ body {
   padding: 0 30px;
 }
 .highlight {
-  color: #ff008e;
+  background-color: #fff;
+  color: #e21717;
 }
-
+.primary-button {
+  outline: 0;
+  border: 0;
+  padding: 15px 20px;
+  background-image: linear-gradient(90deg, #bf3325, #eb4d4b);
+  color: #fff;
+  font-size: 18px;
+  text-transform: uppercase;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 7px 0 #e79797;
+  position: relative;
+  top: 0;
+}
+.primary-button:active {
+  top: 5px;
+  box-shadow: 0 2px 0 #fcc3cc;
+}
+.section-title h1 {
+  font-size: 40px;
+  display: inline-block;
+  text-transform: uppercase;
+  border-bottom: 2px solid #d82e2f;
+  margin: 50px 0;
+}
 /* ------------------ Header ------------------*/
 header {
-  background-image: url("../images/cloud.png");
+  background-image: url("../images/baclground.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: #d82e2f;
   background-blend-mode: overlay;
+  margin-bottom: 180px;
 }
+
+/* ------------------ Navbar ------------------ */
 nav {
   display: flex;
   justify-content: space-between;
   height: 80px;
   align-items: center;
 }
-
 .navigation {
   display: flex;
 }
@@ -50,6 +78,11 @@ nav {
   font-weight: 600;
   padding: 15px 10px;
 }
+.navigation li a:hover {
+  background-color: #fff;
+  color: #d82e2f;
+  border-radius: 5px;
+}
 #nav-toggler {
   display: none;
 }
@@ -58,12 +91,13 @@ nav {
   color: #fff;
   font-size: 30px;
 }
-
+/* ------------------ Banner section ------------------ */
 .banner {
   height: calc(100vh - 80px);
   min-height: 500px;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
 }
 .banner-left {
   display: flex;
@@ -88,4 +122,81 @@ nav {
 }
 .banner-right img {
   width: 100%;
+}
+
+/* About Me */
+#about-me {
+  margin-bottom: 140px;
+}
+.section-title {
+  text-align: center;
+}
+.about-me {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  gap: 80px;
+}
+.about-me-left img {
+  width: 100%;
+}
+.skill {
+  display: flex;
+  flex-direction: column;
+}
+.light-red {
+  background-color: #eb4d4b;
+  color: #fff;
+  border-radius: 10px;
+}
+
+/* Blog */
+#my-blog {
+  margin-bottom: 140px;
+}
+.my-blog {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: center;
+  gap: 30px;
+}
+.thumbnail img {
+  width: 100%;
+}
+/* Contact Me */
+
+.contact {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+.contact-me-right form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.text-field {
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px;
+  font-size: 18px;
+  font-family: inherit;
+  outline: 0;
+  border: 1px solid #ff008e;
+}
+
+/* footer */
+footer {
+  margin-top: 50px;
+  height: 50px;
+  display: flex;
+  background-color: black;
+  color: #fff;
+  justify-content: center;
+  align-items: center;
+}
+footer small span.highlight {
+  background-color: black;
+  font-size: 1.2em;
+  font-weight: 600;
 }
